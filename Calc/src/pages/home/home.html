@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Calculadora
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>N1</ion-label>
+      <ion-input type="number" [(ngModel)]="total.n1"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>N2</ion-label>
+      <ion-input type="number" [(ngModel)]="total.n2"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <button ion-button full (click)=somaToast()>+</button>
+      </ion-col>
+      <ion-col>
+        <button ion-button full (click)=subToast()>-</button>
+      </ion-col>
+      <ion-col>
+        <button ion-button full (click)=multToast()>*</button>
+      </ion-col>
+      <ion-col>
+        <button ion-button full (click)=divToast()>/</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

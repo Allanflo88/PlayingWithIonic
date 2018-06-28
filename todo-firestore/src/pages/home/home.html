@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Todo-firestore
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Título:</ion-label>
+      <ion-input type="text" [(ngModel)]="todo.titulo"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Subtítulo:</ion-label>
+      <ion-input type="text" [(ngModel)]="todo.sub"></ion-input>
+    </ion-item>
+
+    <button ion-button full (click)=add()>Salvar</button>
+
+  </ion-list>
+  <ion-list *ngFor="let todo of todos | async">
+    <ion-item>
+      <ion-card>
+        <ion-card-header>
+          {{ todo.titulo }}
+        </ion-card-header>
+        <ion-card-content>
+          {{ todo.sub }}
+        </ion-card-content>
+      </ion-card>
+
+
+    </ion-item>
+  </ion-list>
+</ion-content>

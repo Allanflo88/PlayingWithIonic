@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Todo!!!
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding >
+  <ion-list>
+      <button ion-item (click)="open(item)" *ngFor="let item of items | async">
+        <ion-card>
+          <ion-card-header>
+            {{item.header}}
+          </ion-card-header>
+          <ion-card-content>
+            {{item.content}}
+          </ion-card-content>
+        </ion-card>
+      </button>
+
+  </ion-list>
+  <ion-fab right bottom>
+    <button ion-fab color="light" (click)="add()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>

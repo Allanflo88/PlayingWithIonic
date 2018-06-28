@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Nome</ion-label>
+      <ion-input type="text" [(ngModel)]="pessoa.nome"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label floating>Endereço</ion-label>
+      <ion-input type="text" [(ngModel)]="pessoa.end"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Telefone</ion-label>
+      <ion-input type="tel" [(ngModel)]="pessoa.tel"></ion-input>
+    </ion-item>
+  
+  </ion-list>
+  <button ion-button>Limpar</button>
+  <button ion-button (click)=add()>Salvar</button>
+  <ion-list>
+    <button ion-item *ngFor="let item of pessoas">
+      {{ item }}
+    </button>  
+  </ion-list>
+</ion-content>
